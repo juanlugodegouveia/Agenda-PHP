@@ -1,0 +1,284 @@
+/**Customs Properties **/
+
+:root {
+  --primario: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+  background-blend-mode: normal, lighten, soft-light;
+  --primarioOscuro: #585858;
+  --secundario: #ffc107;
+  --fuentePrimaria: 'Arial', Helvetica, sans-serif;
+  --fuenteSecundaria: 'Poppins', sans-serif;
+}
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: var(--primario);
+  font-family: var(--fuentePrimaria);
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bg-amarrillo {
+  background-color: var(--secundario);
+}
+
+.bg-blanco {
+  background-color: #ffffff;
+}
+
+.barra {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+}
+
+.sombra {
+  -webkit-box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.5);
+box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.5);
+border-radius: 10px;
+}
+
+h1 ,h2 {
+  font-family: var(--fuenteSecundaria);
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #9D9EA3;
+}
+
+.contenedor-barra {
+  padding: 1.5rem;
+  background-color: var(--primarioOscuro);
+  margin-bottom: 2rem;
+}
+
+/**Formulario**/
+
+form {
+  margin-top: 2rem;
+  padding: 2.1rem;
+  margin: 0;
+}
+
+form legend {
+  font-family: var(--fuenteSecundaria);
+  font-size: 2rem;
+  text-align: center;
+  display: block; /*Lo coloque por que no me centraba*/
+}
+
+form legend span {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 2rem;
+  clear: both;
+  display: block;
+}
+
+@media (min-width:768px) {
+  .campos {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .campo {
+    flex: 0 0 calc(33.3% - 1rem); /**El -1 rem agrega separacion entre los campos, como un padding, son tips del profe*/
+  }
+}
+
+.campo {
+  flex: 0 0 calc(33.3% - 1rem); /**El -1 rem agrega separacion entre los campos, como un padding, son tips del profe*/
+  padding: .5rem 0;
+}
+
+.campo label {
+  font-size: 1.2rem;
+}
+
+.campo input[type="text"], .campo input[type="tel"] {
+  width:100%;
+  border: none;
+  padding: .5rem;
+  height: 2.5rem;
+  margin-top: .5rem;
+  font-size: 1.1rem;
+}
+
+.enviar
+ {
+   display: flex;
+   justify-content: flex-end;
+ }
+
+.campo input[type="submit"] {
+  background-color: #9D9EA3;
+  border: none;
+  color: #000000;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color .5s ease-in-out;
+  flex: 1; /*Para que cuando este en dispositivo movil se centre el boton,valido si es un solo elemento para tomar todo el espacio disponible, si son dos o maas realiza una operacion*/
+}
+
+.campo input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--primarioOscuro);
+}
+
+@media (min-width:768px) {
+  .campo input[type="submit"] {
+    flex: 0 0 auto;
+  }
+}
+
+/*Listado de Contactos*/
+
+.contactos {
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.contenedor-contactos {
+  max-width: 800px;
+  margin: 2rem auto 0 auto;
+}
+
+.total-contactos {
+  font-family: var(--fuenteSecundaria);
+  margin: 2rem 0;
+  text-align: center;
+  color: #9D9EA3;
+  font-size: 2rem;
+}
+
+.total-contactos span {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.buscador {
+  width: 100%;
+  height: 2.5rem;
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+  margin: 2rem 0;
+  box-shadow:
+}
+
+.contenedor-tabla {
+  overflow: scroll;
+}
+
+.listado-contactos {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+.listado-contactos thead {
+  background-color: #9D9EA3;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.listado-contactos thead th {
+  padding: 1rem 0;
+}
+
+.listado-contactos tbody td {
+  padding: .5rem;
+}
+
+.listado-contactos tbody td:nth-child(4) {
+  text-align: center;
+}
+
+.listado-contactos button {
+  background-color: transparent!important;
+  border: none;
+}
+
+/*Botones*/
+
+.btn {
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-editar {
+  color: var(--secundario);
+}
+
+.btn-borrar {
+  color: #9D9EA3;
+}
+
+.volver {
+  background-color: var(--secundario);
+  border-radius: 5px;
+  text-align: center;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+
+/*Notificaciones*/
+.notificacion {
+  position: fixed;
+  top: 1.2rem;
+  right: 1rem;
+  padding: 1rem 3rem;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+/*Colores de la notificacion*/
+
+.correcto {
+  background-color: rgb(179,241,117);
+  color: green;
+}
+
+.error {
+  background-color: rgb(238,148,166);
+  color: rgb(163, 0, 33);
+}
