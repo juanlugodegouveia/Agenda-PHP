@@ -1,8 +1,8 @@
-# Agenda PHP
+# PHP Agenda
 
-Agenda de contactos, creada con [PHP], [MySQL], [AJAX], [ES6], [CSSGrid] y [Flexbox]. Como desarrollador Web es muy probable que soliciten proyectos de este tipo [“CRUD”], en donde podamos crear, leer, actualizar y borrar datos en una base de datos. Se basa en un formulario con todos los campos obligatorios y correctamente validados, la parte visual fue realizada con [HTML 5] y [CSS 3], en donde incluimos [CSS Grid] y [flexbox]. Además de la implementación de [AJAX] y [JavaScript] que nos permite hacer el Sitio Web más interactivo.
+Contacts directory, created with [PHP], [MySQL], [AJAX], [ES6], [CSSGrid] and [Flexbox]. As a Web developer it is very likely that they will request projects of this type ["CRUD"], where we can create, read, update and delete data in a database. It is based on a form with all the required and correctly validated fields, the visual part was made with [HTML 5] and [CSS 3], where we include [CSS Grid] and [flexbox]. In addition to the implementation of [AJAX] and [JavaScript] that allows us to make the Website more interactive.
 
-Un diseño simple con el cual podrían guisarse para futuros proyectos, la intención es dar una idea de como podrían realizarlo y ahorrar tiempo.
+A simple design with which they could be cooked for future projects, the intention is to give an idea of how they could do it and save time.
 
 ## Copyright
 
